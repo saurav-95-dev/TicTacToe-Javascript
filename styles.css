@@ -1,11 +1,13 @@
 .col{
     border:1px solid black;
-    height: 80px;
-    width: 80px;
+    height: 150px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 30px;
 }
+
 .row{
     display: flex;
     justify-content: center;

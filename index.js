@@ -1,22 +1,51 @@
 let themeButton = document.getElementsByClassName("theme-btn");
 let page = document.getElementsByClassName("page");
 let col = document.getElementsByClassName("col");
+let firstTurnX = document.getElementsByClassName("x")[0];
+let firstTurnO = document.getElementsByClassName("o")[0];
+let currentTurnText = document.getElementsByClassName("current-turn-text");
+
+
+console.log(firstTurnO);
+console.log(firstTurnX);
 console.log(page);
 console.log(themeButton);
 
 let currentPlayer = "X";
 
+// Function to set first player
+firstTurnO.addEventListener("click", () => {
+    currentPlayer = "O";
+    console.log("First turn set to O");
+});
+
+firstTurnX.addEventListener("click", () => {
+    currentPlayer = "X";
+    console.log("First turn set to X");
+});
+
 let arr = Array(9).fill(null);
 console.log(arr);
+
 let handleClick = (e) => {
-    let id = e.id;
+    let id = e.id; // Get cell id
     console.log(id);
+
+    // Prevent overwriting existing cell values
+    if (arr[id] !== null) {
+        alert("Cell already filled! Choose another.");
+        return;
+    }
+
+    // Update cell state and display
     arr[id] = currentPlayer;
-    currentPlayer = currentPlayer === "X" ? "0" : "X"; 
-    console.log(arr);
     e.innerText = currentPlayer;
 
-}
+    // Switch to the next player
+    currentPlayer = currentPlayer === "X" ? "O" : "X"; 
+    currentTurnText.innerText = `Current turn -> ${currentPlayer}`;
+    console.log(arr);
+};
 // Loop through each theme button :
 for (let i = 0; i < themeButton.length; i++) {
     themeButton[i].addEventListener("click", () => {

@@ -15,4 +15,4 @@ Promises , API Calling , DOM Manipulation , gettingCurrentLocation .
 #### USAGE :
 #### LICENSE :
 #### CONTACT :
-#### TRY IT -->  https://angrybird-tamaatar.netlify.app/
+#### TRY IT --> https://tic-tac-toe-saurabh-dev.netlify.app/

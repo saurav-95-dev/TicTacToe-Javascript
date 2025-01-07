@@ -17,11 +17,14 @@ let currentPlayer = "X";
 firstTurnO.addEventListener("click", () => {
     currentPlayer = "O";
     console.log("First turn set to O");
+    currentTurnText[0].innerText = `${currentPlayer}`;
+    
 });
 
 firstTurnX.addEventListener("click", () => {
     currentPlayer = "X";
     console.log("First turn set to X");
+    currentTurnText[0].innerText = `${currentPlayer}`;
 });
 
 let arr = Array(9).fill(null);
@@ -43,7 +46,8 @@ let handleClick = (e) => {
 
     // Switch to the next player
     currentPlayer = currentPlayer === "X" ? "O" : "X"; 
-    currentTurnText.innerText = `Current turn -> ${currentPlayer}`;
+
+    currentTurnText[0].innerText = `${currentPlayer}`;
     console.log(arr);
 };
 // Loop through each theme button :
@@ -73,8 +77,9 @@ for (let i = 0; i < themeButton.length; i++) {
             }
         }
     });
-
-
 }
+
+//Winning logic :
+
 
 

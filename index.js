@@ -59,11 +59,24 @@ let handleClick = (e) => {
         (arr[2] == "X" && arr[4] == "X" && arr[6] == "X" )
     ) {
         for (let i = 0; i < page.length; i++){
-            page[i].innerHTML = "<h1>Game Over dear : O<h1/>(Better luck next time)<br><br>Congratulation to --> X";
+            page[i].innerHTML = "<h1>Game Over dear : O<h1/>(Better luck next time)<br><br>Congratulation to --> X !";
             page[i].style.marginTop = "60px";
             page[i].style.color = "red";
+            let playAgainButton = document.createElement("button");
+            playAgainButton.className = "play-again-btn";
+            playAgainButton.textContent = "Play Again";
+            playAgainButton.style.padding = "10px";
+            playAgainButton.style.marginTop = "40px";
+            playAgainButton.style.background = "#7CFC00";
+            playAgainButton.style.border = "none";
+            playAgainButton.style.borderRadius = "8px";
+            page[i].appendChild(playAgainButton);
+            playAgainButton.addEventListener("click", () => {
+                window.location.reload();
+            });
             
         }
+   
     }
     else if ((arr[0] == "O" && arr[1] == "O" && arr[2] == "O") ||
         (arr[3] == "O" && arr[4] == "O" && arr[5] == "O") ||
@@ -72,11 +85,23 @@ let handleClick = (e) => {
         (arr[2] == "O" && arr[4] == "O" && arr[6] == "O")
     ) {
         for (let i = 0; i < page.length; i++){
-            page[i].innerHTML = "<h1>Game Over dear : X<h1/>(Better luck next time)<br><br>Congratulation to --> O";
+            page[i].innerHTML = "<h1>Game Over dear : X<h1/>(Better luck next time)<br><br>Congratulation to --> O !";
             page[i].style.marginTop = "60px";
             page[i].style.color = "red";
-            
+            let playAgainButton = document.createElement("button");
+            playAgainButton.className = "play-again-btn";
+            playAgainButton.textContent = "Play Again";
+            playAgainButton.style.padding = "10px";
+            playAgainButton.style.marginTop = "40px";
+            playAgainButton.style.background = "#7CFC00";
+            playAgainButton.style.border = "none";
+            playAgainButton.style.borderRadius = "8px";
+            page[i].appendChild(playAgainButton);
+            playAgainButton.addEventListener("click", () => {
+                window.location.reload();
+            });
         }
+    
     }
     else {
         if (! arr.some((e)=>{return e===null} )) {
@@ -84,8 +109,20 @@ let handleClick = (e) => {
                 page[i].innerHTML = "<h1>HAA HAA ..Game draw<h1/>";
                 page[i].style.marginTop = "60px";
                 page[i].style.color = "blue";
+                let playAgainButton = document.createElement("button");
+                playAgainButton.className = "play-again-btn";
+                playAgainButton.textContent = "Play Again";
+                playAgainButton.style.padding = "10px";
+                playAgainButton.style.marginTop = "40px";
+                playAgainButton.style.background = "#7CFC00";
+                playAgainButton.style.border = "none";
+                playAgainButton.style.borderRadius = "8px"; 
+                page[i].appendChild(playAgainButton);
+                playAgainButton.addEventListener("click", () => {
+                window.location.reload();
+            });
             }
-            return;
+           
        }
     }
 

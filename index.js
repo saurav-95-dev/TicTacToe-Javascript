@@ -51,18 +51,21 @@ let handleClick = (e) => {
     currentTurnText[0].innerText = `${currentPlayer}`;
     console.log(arr);
     //Implementing the winning logic:
+    
     if ((arr[0] == "X" && arr[1] == "X" && arr[2] == "X") ||
         (arr[3] == "X" && arr[4] == "X" && arr[5] == "X") ||
         (arr[6] == "X" && arr[7] == "X" && arr[8] == "X") ||
         (arr[0] == "X" && arr[4] == "X" && arr[8] == "X") ||
-        (arr[2] == "X" && arr[4] == "X" && arr[6] == "X")
+        (arr[2] == "X" && arr[4] == "X" && arr[6] == "X" )
     ) {
         for (let i = 0; i < page.length; i++){
             page[i].innerHTML = "<h1>Game Over dear : O<h1/>(Better luck next time)<br><br>Congratulation to --> X";
-            page[i].style.marginTop = "30px";
+            page[i].style.marginTop = "60px";
+            page[i].style.color = "red";
+            
         }
     }
-    if ((arr[0] == "O" && arr[1] == "O" && arr[2] == "O") ||
+    else if ((arr[0] == "O" && arr[1] == "O" && arr[2] == "O") ||
         (arr[3] == "O" && arr[4] == "O" && arr[5] == "O") ||
         (arr[6] == "O" && arr[7] == "O" && arr[8] == "O") ||
         (arr[0] == "O" && arr[4] == "O" && arr[8] == "O") ||
@@ -70,8 +73,20 @@ let handleClick = (e) => {
     ) {
         for (let i = 0; i < page.length; i++){
             page[i].innerHTML = "<h1>Game Over dear : X<h1/>(Better luck next time)<br><br>Congratulation to --> O";
-            page[i].style.marginTop = "30px";
+            page[i].style.marginTop = "60px";
+            page[i].style.color = "red";
+            
         }
+    }
+    else {
+        if (! arr.some((e)=>{return e===null} )) {
+            for (let i = 0; i < page.length; i++){
+                page[i].innerHTML = "<h1>HAA HAA ..Game draw<h1/>";
+                page[i].style.marginTop = "60px";
+                page[i].style.color = "blue";
+            }
+            return;
+       }
     }
 
 };

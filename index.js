@@ -56,7 +56,11 @@ let handleClick = (e) => {
         (arr[3] == "X" && arr[4] == "X" && arr[5] == "X") ||
         (arr[6] == "X" && arr[7] == "X" && arr[8] == "X") ||
         (arr[0] == "X" && arr[4] == "X" && arr[8] == "X") ||
-        (arr[2] == "X" && arr[4] == "X" && arr[6] == "X" )
+        (arr[2] == "X" && arr[4] == "X" && arr[6] == "X") ||
+        (arr[0] == "X" && arr[3] == "X" && arr[6] == "X") ||
+        (arr[1] == "X" && arr[4] == "X" && arr[7] == "X") ||
+        (arr[2] == "X" && arr[5] == "X" && arr[8] == "X")
+        
     ) {
         for (let i = 0; i < page.length; i++){
             page[i].innerHTML = "<h1>Game Over dear : O<h1/>(Better luck next time)<br><br>Congratulation to --> X !";
@@ -79,10 +83,13 @@ let handleClick = (e) => {
    
     }
     else if ((arr[0] == "O" && arr[1] == "O" && arr[2] == "O") ||
-        (arr[3] == "O" && arr[4] == "O" && arr[5] == "O") ||
-        (arr[6] == "O" && arr[7] == "O" && arr[8] == "O") ||
-        (arr[0] == "O" && arr[4] == "O" && arr[8] == "O") ||
-        (arr[2] == "O" && arr[4] == "O" && arr[6] == "O")
+    (arr[3] == "O" && arr[4] == "O" && arr[5] == "O") ||
+    (arr[6] == "O" && arr[7] == "O" && arr[8] == "O") ||
+    (arr[0] == "O" && arr[4] == "O" && arr[8] == "O") ||
+    (arr[2] == "O" && arr[4] == "O" && arr[6] == "O") ||
+    (arr[0] == "O" && arr[3] == "O" && arr[6] == "O") ||
+    (arr[1] == "O" && arr[4] == "O" && arr[7] == "O") ||
+    (arr[2] == "O" && arr[5] == "O" && arr[8] == "O")
     ) {
         for (let i = 0; i < page.length; i++){
             page[i].innerHTML = "<h1>Game Over dear : X<h1/>(Better luck next time)<br><br>Congratulation to --> O !";

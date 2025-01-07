@@ -4,7 +4,7 @@ let col = document.getElementsByClassName("col");
 let firstTurnX = document.getElementsByClassName("x")[0];
 let firstTurnO = document.getElementsByClassName("o")[0];
 let currentTurnText = document.getElementsByClassName("current-turn-text");
-
+let pageId = document.getElementById("page-id");
 
 console.log(firstTurnO);
 console.log(firstTurnX);
@@ -39,6 +39,7 @@ let handleClick = (e) => {
         alert("Cell already filled! Choose another.");
         return;
     }
+    console.log(arr[id]);
 
     // Update cell state and display
     arr[id] = currentPlayer;
@@ -49,6 +50,30 @@ let handleClick = (e) => {
 
     currentTurnText[0].innerText = `${currentPlayer}`;
     console.log(arr);
+    //Implementing the winning logic:
+    if ((arr[0] == "X" && arr[1] == "X" && arr[2] == "X") ||
+        (arr[3] == "X" && arr[4] == "X" && arr[5] == "X") ||
+        (arr[6] == "X" && arr[7] == "X" && arr[8] == "X") ||
+        (arr[0] == "X" && arr[4] == "X" && arr[8] == "X") ||
+        (arr[2] == "X" && arr[4] == "X" && arr[6] == "X")
+    ) {
+        for (let i = 0; i < page.length; i++){
+            page[i].innerHTML = "<h1>Game Over dear : O<h1/>(Better luck next time)<br><br>Congratulation to --> X";
+            page[i].style.marginTop = "30px";
+        }
+    }
+    if ((arr[0] == "O" && arr[1] == "O" && arr[2] == "O") ||
+        (arr[3] == "O" && arr[4] == "O" && arr[5] == "O") ||
+        (arr[6] == "O" && arr[7] == "O" && arr[8] == "O") ||
+        (arr[0] == "O" && arr[4] == "O" && arr[8] == "O") ||
+        (arr[2] == "O" && arr[4] == "O" && arr[6] == "O")
+    ) {
+        for (let i = 0; i < page.length; i++){
+            page[i].innerHTML = "<h1>Game Over dear : X<h1/>(Better luck next time)<br><br>Congratulation to --> O";
+            page[i].style.marginTop = "30px";
+        }
+    }
+
 };
 // Loop through each theme button :
 for (let i = 0; i < themeButton.length; i++) {
@@ -78,8 +103,4 @@ for (let i = 0; i < themeButton.length; i++) {
         }
     });
 }
-
-//Winning logic :
-
-
 

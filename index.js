@@ -67,7 +67,7 @@ let handleClick = (e) => {
             page[i].innerHTML = "<h1>Game Over dear : O<h1/>(Better luck next time)<br><br>Congratulation to --> X !";
             page[i].style.marginTop = "60px";
             page[i].style.color = "red";
-            //Better DOM Technique , (Implementing Play Again Button):
+            //Better DOM Technique , (Implementing Play Again Button via document.createElement):
             let playAgainButton = document.createElement("button");
             playAgainButton.className = "play-again-btn";
             playAgainButton.textContent = "Play Again";
@@ -78,6 +78,7 @@ let handleClick = (e) => {
             playAgainButton.style.border = "none";
             playAgainButton.style.borderRadius = "8px";
             page[i].appendChild(playAgainButton);
+            
             //Reload the page on the click of "Play again" button:
             playAgainButton.addEventListener("click", () => {
                 window.location.reload();

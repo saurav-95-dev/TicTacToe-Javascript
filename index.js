@@ -140,6 +140,7 @@ let handleClick = (e) => {
 
 };
 // Loop through each theme button :
+//Implementing theme button UI appearnace:
 for (let i = 0; i < themeButton.length; i++) {
     themeButton[i].addEventListener("click", () => {
         // Loop through each page element

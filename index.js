@@ -50,7 +50,8 @@ let handleClick = (e) => {
 
     currentTurnText[0].innerText = `${currentPlayer}`;
     console.log(arr);
-    //Implementing the winning logic:
+
+    //Implementing the winning logic for X:
     
     if ((arr[0] == "X" && arr[1] == "X" && arr[2] == "X") ||
         (arr[3] == "X" && arr[4] == "X" && arr[5] == "X") ||
@@ -66,15 +67,18 @@ let handleClick = (e) => {
             page[i].innerHTML = "<h1>Game Over dear : O<h1/>(Better luck next time)<br><br>Congratulation to --> X !";
             page[i].style.marginTop = "60px";
             page[i].style.color = "red";
+            //Better DOM Technique , (Implementing Play Again Button):
             let playAgainButton = document.createElement("button");
             playAgainButton.className = "play-again-btn";
             playAgainButton.textContent = "Play Again";
+            //Styling Play again button:
             playAgainButton.style.padding = "10px";
             playAgainButton.style.marginTop = "40px";
             playAgainButton.style.background = "#7CFC00";
             playAgainButton.style.border = "none";
             playAgainButton.style.borderRadius = "8px";
             page[i].appendChild(playAgainButton);
+            //Reload the page on the click of "Play again" button:
             playAgainButton.addEventListener("click", () => {
                 window.location.reload();
             });
@@ -82,6 +86,7 @@ let handleClick = (e) => {
         }
    
     }
+    //Implementing the winning logic for O:
     else if ((arr[0] == "O" && arr[1] == "O" && arr[2] == "O") ||
     (arr[3] == "O" && arr[4] == "O" && arr[5] == "O") ||
     (arr[6] == "O" && arr[7] == "O" && arr[8] == "O") ||

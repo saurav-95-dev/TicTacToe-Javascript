@@ -5,6 +5,8 @@ let firstTurnX = document.getElementsByClassName("x")[0];
 let firstTurnO = document.getElementsByClassName("o")[0];
 let currentTurnText = document.getElementsByClassName("current-turn-text");
 let pageId = document.getElementById("page-id");
+let X = document.getElementById("X");
+let XDisplay = document.getElementById("X-display");
 
 console.log(firstTurnO);
 console.log(firstTurnX);
@@ -25,6 +27,7 @@ firstTurnX.addEventListener("click", () => {
     currentPlayer = "X";
     console.log("First turn set to X");
     currentTurnText[0].innerText = `${currentPlayer}`;
+
 });
 
 let arr = Array(9).fill(null);
@@ -41,9 +44,12 @@ let handleClick = (e) => {
     }
     console.log(arr[id]);
 
+    XDisplay.innerText = `Hey ${currentPlayer} your turn is over !`;
     // Update cell state and display
     arr[id] = currentPlayer;
     e.innerText = currentPlayer;
+
+    
 
     // Switch to the next player
     currentPlayer = currentPlayer === "X" ? "O" : "X"; 

@@ -20,6 +20,7 @@ firstTurnO.addEventListener("click", () => {
     currentPlayer = "O";
     console.log("First turn set to O");
     currentTurnText[0].innerText = `${currentPlayer}`;
+    XDisplay.innerText = `Hey ${currentPlayer} it's your turn !`;
     
 });
 
@@ -27,6 +28,7 @@ firstTurnX.addEventListener("click", () => {
     currentPlayer = "X";
     console.log("First turn set to X");
     currentTurnText[0].innerText = `${currentPlayer}`;
+    XDisplay.innerText = `Hey ${currentPlayer} it's your turn !`;
 
 });
 

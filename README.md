@@ -6,11 +6,12 @@
 <img width="312" alt="Screenshot 2025-01-07 at 6 00 48 PM" src="https://github.com/user-attachments/assets/c19aab80-c924-4646-912f-03c7a9146d4b" />
 <img width="312" alt="Screenshot 2025-01-07 at 6 01 11 PM" src="https://github.com/user-attachments/assets/4ba5c97e-cbec-4ff1-aa75-b2ebdc036ec4" />
 
-#### PROJECT :
+#### PROJECT : 
+TIC TAC TOE GAME
 #### ACKNOWLEDGEMENTS :
 #### DESCRIPTION :
 #### TECHNOLOGIES :
-HTML , CSS , Javascript
+HTML , CSS , Plane Javascript
 
 #### CONCEPTS AND BEST PRACTICES :
 Promises , API Calling , DOM Manipulation , gettingCurrentLocation .

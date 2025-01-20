@@ -12,10 +12,10 @@ TIC TAC TOE GAME
 NONE 
 #### DESCRIPTION :
 #### TECHNOLOGIES :
-HTML , CSS , Plane Javascript
+HTML , CSS , Plane Javascript 
 
 #### CONCEPTS AND BEST PRACTICES :
-Promises , API Calling , DOM Manipulation , gettingCurrentLocation .
+
 
 #### USAGE :
 #### LICENSE :

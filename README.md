@@ -8,9 +8,11 @@
 
 #### PROJECT : 
 TIC TAC TOE GAME
+
 #### ACKNOWLEDGEMENTS :
 NONE 
 #### DESCRIPTION :
+
 #### TECHNOLOGIES :
 HTML , CSS , Plane Javascript 
 
@@ -18,7 +20,10 @@ HTML , CSS , Plane Javascript
 
 
 #### USAGE :
+
 #### LICENSE :
+
 #### CONTACT : 
 You can reach out to me at -> devsaurabh086@gmail.com
+
 #### TRY IT --> https://tic-tac-toe-saurabh-dev.netlify.app/

@@ -14,7 +14,7 @@ NONE
 #### DESCRIPTION :
 
 #### TECHNOLOGIES :
-HTML , CSS , Plane Javascript 
+HTML , CSS , Plane Javascript , DOM Manipulation
 
 #### CONCEPTS AND BEST PRACTICES :
 
